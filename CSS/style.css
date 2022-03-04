@@ -429,6 +429,8 @@ ul {
 .form-input-comment:focus {
   border: 1px solid #2196f3;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline-color: #2196f3;
+  outline-width: 1px;
 }
 
 .czym-sie-zajmujemy {
@@ -701,6 +703,7 @@ ul {
   min-height: 581px;
   background-color: #ffffff;
   animation: animateModal 1000ms 1000ms;
+  border-radius: 4px;
 }
 
 @keyframes animateModal {
@@ -803,6 +806,9 @@ ul {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  padding-left: 42px;
+  outline-color: #2196f3;
+  color: #757575;
 }
 
 .form-label {
@@ -814,18 +820,36 @@ ul {
   font-style: normal;
 }
 
+.form-label-comment {
+  text-align: left;
+  margin-top: 10px;
+  padding-bottom: 4px;
+  color: #757575;
+  font-size: 12px;
+  font-style: normal;
+}
+
+textarea {
+  text-align: left;
+  vertical-align: text-top;
+}
+
 .form-input-comment {
   width: 448px;
   height: 120px;
+  padding-top: 12px;
+  padding-left: 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
   color: #757575;
   font-size: 12px;
   font-style: normal;
+  resize: none;
 }
 
 .form-checkbox {
+  position: relative;
   margin-top: 20px;
   font-size: 14px;
   font-style: normal;
@@ -833,8 +857,34 @@ ul {
 }
 
 .check-box1 {
+  position: relative;
   width: 16px;
   height: 15px;
+  border: 1px solid #212121;
+  border-radius: 4px;
+  appearance: none;
+}
+
+.form-icon-check {
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  margin-left: -19px;
+  margin-top: 1px;
+
+  border-radius: 4px;
+  fill: none;
+  visibility: hidden;
+}
+
+.check-box1:checked + .form-icon-check {
+  fill: white;
+  visibility: visible;
+}
+
+.check-box1:checked {
+  border: none;
+  background-color: #2196f3;
 }
 
 .btn-send {
@@ -858,15 +908,23 @@ ul {
 
 .icons-position {
   position: relative;
+  width: 448px;
+  height: 40px;
 }
 
-.person-icon,
-.phone-icon,
-.email-icon {
+.form-icon {
   position: absolute;
   width: 18px;
   height: 18px;
   margin-left: 12px;
   margin-top: 11px;
   fill: #212121;
+}
+
+.icons-position:focus-within .form-icon {
+  fill: #2196f3;
+}
+
+.email-icon:hover {
+  fill: #2196f3;
 }

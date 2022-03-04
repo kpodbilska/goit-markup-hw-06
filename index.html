@@ -416,48 +416,65 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" class="close-button" data-modal-close>x</button>
-
         <div class="form">
           <div class="form-title">Zostaw swoje dane w formularzu poniżej</div>
 
           <label for="form-input-name" class="form-label"
             >Imie
             <div class="icons-position">
-              <svg class="person-icon">
+              <svg class="form-icon">
                 <use href="images/icons.svg#icon-person" class="use"></use>
               </svg>
-              <input type="text" class="form-input-name form-input-space" name="imie"/>
+              <input
+                type="text"
+                class="form-input-name form-input-space"
+                name="imie"
+              />
             </div>
           </label>
 
-          <label for="form-input-phone" class="form-label">Telefon<label>
-          <div class="icons-position">
-            <svg class="phone-icon">
-              <use href="images/icons.svg#icon-phone" class="use"></use>
-            </svg>
-            <input type="text" class="form-input-phone form-input-space" name="numer telefonu"/>
-          </div>
+          <label for="form-input-phone" class="form-label"
+            >Telefon
+            <div class="icons-position">
+              <svg class="form-icon">
+                <use href="images/icons.svg#icon-phone" class="use"></use>
+              </svg>
+              <input
+                type="text"
+                class="form-input-phone form-input-space"
+                name="numer telefonu"
+              />
+            </div>
           </label>
-          <label for="form-input-email" class="form-label">Email<label>
 
-          <div class="icons-position">
-            <svg class="email-icon">
-              <use href="images/icons.svg#icon-email" class="use"></use>
-            </svg>
-            <input type="text" class="form-input-email form-input-space" name="adres email"/>
-          </div>
+          <label for="form-input-email" class="form-label"
+            >Email
+
+            <div class="icons-position">
+              <svg class="form-icon">
+                <use href="images/icons.svg#icon-email" class="use"></use>
+              </svg>
+              <input
+                type="text"
+                class="form-input-email form-input-space"
+                name="adres email"
+              />
+            </div>
           </label>
-          <label for="form-input-coment" class="form-label">Komentarz</label>
-          <div class="icons-position">
-            <input
-              type="text"
-              class="form-input-comment"
-              placeholder="Wprowadź tekst"
-            />
-          </div>
+          <label for="form-input-comment" class="form-label-comment"
+            >Komentarz
+          </label>
+          <textarea
+            class="form-input-comment"
+            placeholder="Wprowadź tekst"
+          ></textarea>
+
           <div class="form-checkbox">
-            <input type="checkbox" class="check-box1" />
+            <input type="checkbox" class="check-box1" unchecked />
+
+            <svg class="form-icon-check">
+              <use href="images/icons.svg#icon-check" class="use"></use>
+            </svg>
 
             <span class="checkbox-text">Oświadczam iż akceptuję</span>
             <a href="#">Regulamin</a>
@@ -465,6 +482,7 @@
             <a href="#">Politykę Prywatności.</a>
           </div>
           <button type="submit" class="btn-send button">Wyślij</button>
+          <button type="button" class="close-button" data-modal-close>x</button>
         </div>
       </div>
     </div>
